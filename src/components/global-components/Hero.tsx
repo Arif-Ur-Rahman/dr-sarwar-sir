@@ -1,7 +1,6 @@
 // components/HeroSection.tsx (Alternative)
 "use client";
 
-import { Facebook, Github, Linkedin, MessageCircle } from "lucide-react";
 import Image from "next/image";
 
 const HeroSection = () => {
@@ -27,17 +26,16 @@ const HeroSection = () => {
             {/* Main Heading */}
             <div className="space-y-6">
               <div className="space-y-3">
-                <h1 className="text-sm font-bold text-white leading-tight">
-                  I AM <span className="text-[#B94A5B] ">ARAFAT </span> HOSSAIN
-                  SOBUJ
+                <h1 className="text-sm font-bold text-white leading-tight font-dancing italic">
+                  I am <span className="text-[#B94A5B] ">Dr.</span>Sarwar Kamal
                 </h1>
               </div>
 
               {/* Subtitle */}
               <p className="h-[63px] px-[10px] py-3 text-[11px] font-bold text-[#FFFFFF] bg-[#2A2A3A94]/58 leading-100% tracking-wider rounded-[10px]">
-                Full-Stack Mobile App Developer | 9+ Years Experience
+                Data Analytics(Certified Professional (CP)),
                 <br />
-                Expert in Flutter & Node.js | 40+ Successful Projects Delivered
+                Australian Computer Society Sydney, New South Wales, Australia
               </p>
             </div>
 
@@ -85,7 +83,7 @@ const HeroSection = () => {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#E5398F] via-[#8B5CF6] to-[#E5398F] p-1.5">
                 <div className="w-full h-full left-20 rounded-full bg-[#9CA3AF] overflow-hidden">
                   <img
-                    src="/sobuj.png"
+                    src="/profiles/DrSarwarSir.jpg"
                     alt="Profile"
                     className="w-full h-full object-cover"
                   />
@@ -134,7 +132,12 @@ const HeroSection = () => {
                 style={{ left: "10px", top: "8px" }}
                 aria-label="WhatsApp"
               >
-                <Image src="/icons/Whatsapp.png" alt="WhatsApp" width={15} height={15} />
+                <Image
+                  src="/icons/Whatsapp.png"
+                  alt="WhatsApp"
+                  width={15}
+                  height={15}
+                />
               </a>
               <a
                 href="#"
@@ -142,7 +145,12 @@ const HeroSection = () => {
                 style={{ left: "75px", top: "20px" }}
                 aria-label="LinkedIn"
               >
-                <Image src="/icons/mdi_linkedin.svg" alt="LinkedIn" width={15} height={15} />
+                <Image
+                  src="/icons/mdi_linkedin.svg"
+                  alt="LinkedIn"
+                  width={15}
+                  height={15}
+                />
               </a>
               <a
                 href="#"
@@ -150,7 +158,12 @@ const HeroSection = () => {
                 style={{ right: "75px", top: "20px" }}
                 aria-label="Facebook"
               >
-                <Image src="/icons/fb.svg" alt="LinkedIn" width={15} height={15} />
+                <Image
+                  src="/icons/fb.svg"
+                  alt="LinkedIn"
+                  width={15}
+                  height={15}
+                />
               </a>
               <a
                 href="#"
@@ -158,7 +171,12 @@ const HeroSection = () => {
                 style={{ right: "10px", top: "8px" }}
                 aria-label="GitHub"
               >
-                <Image src="/icons/mdi_github.svg" alt="LinkedIn" width={15} height={15} />
+                <Image
+                  src="/icons/mdi_github.svg"
+                  alt="LinkedIn"
+                  width={15}
+                  height={15}
+                />
               </a>
             </div>
           </div>

@@ -37,25 +37,20 @@ const ContactSection = () => {
                   className="object-contain"
                 />
               </div>
-              <h1 className="text-sm sm:text-base font-bold text-white font-roboto ml-2">
-                <span className="text-[#B94A5B]">ARAFAT</span> HOSSAIN SOBUJ
+              <h1 className="text-sm sm:text-base font-bold text-white font-dancing ml-2">
+                <span className="text-[#B94A5B]">Dr. </span> Sarwar Kamal
               </h1>
             </div>
 
             {/* Subtitle */}
             <h2 className="text-[13.51px] sm:text-[15px] text-white font-roboto font-bold leading-5 mb-2 lg:mb-0">
-              A Full Stack Web Developer
+              Data Analytics(Certified Professional (CP)), 
             </h2>
 
             {/* Paragraph in the Middle */}
             <div className="flex-grow mb-4 lg:mb-0">
               <p className="text-[9px] sm:text-[10px] font-normal font-roboto text-[#DBB9B9BA] leading-relaxed">
-                As a Full Stack Web Developer, I am responsible for designing
-                and building complete web applications from start to finish.
-                This includes creating user interfaces, writing server-side
-                code, and managing databases. With my comprehensive knowledge of
-                the entire web development process, I can efficiently turn ideas
-                into fully functional websites or applications.
+                I have been working in data mining and machine learning since 2012. Moreover, I have worked in a software firm to develop gaming software. In data analytics, I have worked for business data analysis, social network data analysis and large biological data mining. I like and love to connect and apply information technology in other disciplines like Biology, Business, and Social netoworking to address and support their demands.
               </p>
             </div>
 

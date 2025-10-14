@@ -68,7 +68,7 @@ const Services = () => {
             </h1>
           </div>
           <p className="text-[11px] font-normal text-[#DBB9B9BA] mx-auto leading-[130%]">
-            I am a highly experienced Full-Stack Mobile App Developer with over seven years in the industry. I specialize in Flutter for mobile development and Node.js for backend solutions. With a deep understanding of scalable architectures, I have successfully delivered 40+ high-performance applications across various industries, ensuring seamless user experiences and efficient backend systems.
+            I have been working in data mining and machine learning since 2012. Moreover, I have worked in a software firm to develop gaming software. In data analytics, I have worked for business data analysis, social network data analysis and large biological data mining. I like and love to connect and apply information technology in other disciplines like Biology, Business, and Social netoworking to address and support their demands.
           </p>
         </div>
 
