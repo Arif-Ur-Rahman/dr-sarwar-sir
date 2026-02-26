@@ -1,95 +1,124 @@
-// components/Navbar.tsx (Alternative)
 "use client";
 
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Instagram, Linkedin, Twitter } from "lucide-react";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState("Home");
-
-  const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Service", href: "#service" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
-  ];
-
-  const handleItemClick = (itemName: string) => {
-    setActiveItem(itemName);
-    setIsMenuOpen(false);
-  };
-
   return (
-    <nav className="w-full  backdrop-blur-sm border-b border-[#11121D] sticky top-0 z-50 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Name/Logo */}
-          <div className="flex-shrink-0">
-            <h1
-              className="text-sm font-bold text-white tracking-normal leading-[15px] italic"
-              style={{ fontFamily: "var(--font-dancing)" }}
-            >
-              <span className="text-[#B94A5B]">Dr.</span> Sarwar Kamal
-            </h1>
+    <nav className="w-full sticky top-0 z-50  shadow-sm"
+    style={{
+        background:
+          "radial-gradient(ellipse 80% 60% at 20% 30%, #e2e2e7 0%, transparent 60%)," +
+          "radial-gradient(ellipse 70% 60% at 80% 70%, #d8d8e0 0%, transparent 60%)," +
+          "radial-gradient(ellipse 90% 80% at 50% 50%, #ececf1 0%, #d4d4db 100%)",
+      }}
+    >
+      <div className="max-w-6xl mx-auto px-6 py-4">
+
+        {/* ── DESKTOP layout (md and up) ── */}
+        <div className="hidden md:flex items-center justify-between">
+
+          {/* Left — Avatar + Name + Title */}
+          <div className="flex items-center gap-3">
+            <div className="w-25 h-25 rounded-full overflow-hidden ring-2 ring-white/60 shadow-md flex-shrink-0">
+              <img
+                src="profiles/DrSarwarSir.jpg"
+                alt="Dr.Sarwar Sir"
+                className="w-full h-full object-fill object-bottom"
+              />
+            </div>
+            <div className="leading-tight">
+              <p className="text-[24px] font-semibold text-gray-900 tracking-tight">
+                Dr. Sarwar Kamal
+              </p>
+              <p className="text-[16px] text-gray-500 font-normal">
+                Associate Professor, <br />
+                East West University, Dhaka.
+              </p>
+            </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-1">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => handleItemClick(item.name)}
-                  className={`px-4 py-2 text-[11px] font-roboto font-semibold  transition-all duration-200 rounded-lg ${
-                    activeItem === item.name
-                      ? "text-[#B94A5B] underline underline-offset-[18.5px] decoration-2 decoration-gradient-to-r from-[#F94A5B] to-[#6A4FFF]"
-                      : "text-white hover:text-primary-600"
-                  }`}
+          <div className="flex-1" />
+
+          {/* Right — Availability + Socials */}
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/70 backdrop-blur-sm shadow-sm border border-gray-100">
+              <span className="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_6px_rgba(74,222,128,0.8)]" />
+              <span className="text-[16px] text-gray-600 font-medium whitespace-nowrap">
+                Available for you
+              </span>
+            </div>
+
+            <div className="h-10 w-px bg-gray-400" />
+
+            <div className="flex items-center gap-2">
+              {[
+                { icon: Twitter, label: "X / Twitter" },
+                { icon: Instagram, label: "Instagram" },
+                { icon: Linkedin, label: "LinkedIn" },
+              ].map(({ icon: Icon, label }) => (
+                <button
+                  key={label}
+                  aria-label={label}
+                  className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 bg-white/70 backdrop-blur-sm shadow-sm hover:bg-white hover:border-gray-300 transition-all duration-150"
                 >
-                  {item.name}
-                </a>
+                  <Icon size={15} className="text-gray-700" />
+                </button>
               ))}
             </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-lg text-gray-600 hover:text-primary-600 hover:bg-gray-100 transition-colors duration-200"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
         </div>
-      </div>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
-          <div className="px-4 pt-2 pb-4 space-y-1">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                onClick={() => handleItemClick(item.name)}
-                className={`block px-4 py-3 text-base font-medium transition-colors duration-200 rounded-lg ${
-                  activeItem === item.name
-                    ? "text-primary-600 bg-primary-50"
-                    : "text-gray-600 hover:text-primary-600 hover:bg-gray-50"
-                }`}
+        {/* ── MOBILE layout (below md) ── */}
+        <div className="flex md:hidden flex-col items-center gap-3 py-2">
+
+          {/* Avatar */}
+          <div className="w-25 h-25 rounded-full overflow-hidden ring-2 ring-white/60 shadow-md flex-shrink-0">
+            <img
+              src="profiles/DrSarwarSir.jpg"
+              alt="Dr.Sarwar Sir"
+              className="w-full h-full object-fill object-bottom"
+            />
+          </div>
+
+          {/* Name + Title */}
+          <div className="text-center leading-tight">
+            <p className="text-[20px] font-semibold text-gray-900 tracking-tight">
+              Hafijul Islam Ador
+            </p>
+            <p className="text-[14px] text-gray-500 font-normal mt-0.5">
+              Product Designer
+            </p>
+          </div>
+
+          {/* Available badge */}
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/70 backdrop-blur-sm shadow-sm border border-gray-100">
+            <span className="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_6px_rgba(74,222,128,0.8)]" />
+            <span className="text-[14px] text-gray-600 font-medium whitespace-nowrap">
+              Available for you
+            </span>
+          </div>
+
+          {/* Social Icons */}
+          <div className="flex items-center gap-2 mt-1">
+            {[
+              { icon: Twitter, label: "X / Twitter" },
+              { icon: Instagram, label: "Instagram" },
+              { icon: Linkedin, label: "LinkedIn" },
+            ].map(({ icon: Icon, label }) => (
+              <button
+                key={label}
+                aria-label={label}
+                className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 bg-white/70 backdrop-blur-sm shadow-sm hover:bg-white hover:border-gray-300 transition-all duration-150"
               >
-                {item.name}
-              </a>
+                <Icon size={15} className="text-gray-700" />
+              </button>
             ))}
           </div>
+
         </div>
-      )}
+
+      </div>
     </nav>
   );
 };
